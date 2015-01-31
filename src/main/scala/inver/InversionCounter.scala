@@ -29,10 +29,10 @@ object InversionCounter {
       case List(_) => (input, 0)
       case l =>
         val n = input.size
-        val left = sortAndCount(input.take(n/2))
-        val right = sortAndCount(input.drop(n/2))
-        val split = countSplitInv(left._1, right._1, (List(), 0))
-        (split._1, left._2 + right._2 + split._2)
+        val (left,left_inv) = sortAndCount(input.take(n/2))
+        val (right, right_inv) = sortAndCount(input.drop(n/2))
+        val (split, split_inv) = countSplitInv(left, right, (List(), 0))
+        (split, left_inv + right_inv + split_inv)
     }
   }
 
