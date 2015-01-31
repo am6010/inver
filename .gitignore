@@ -15,16 +15,7 @@
 
 *.xsl
 
-project/target/streams/$global/$global/$global/streams/out
+target/*
 
-target/streams/$global/ivyConfiguration/$global/streams/out
+project/*
 
-target/streams/runtime/unmanagedClasspath/$global/streams/export
-
-project/target/streams/$global/ivyConfiguration/$global/streams/out
-
-project/target/streams/$global/ivySbt/$global/streams/out
-
-project/target/streams/$global/update/$global/streams/inputs
-
-project/target/streams/$global/update/$global/streams/output
