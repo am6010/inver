@@ -3,6 +3,7 @@ package inver
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
+import util.InputUtilities
 
 
 /**
@@ -13,7 +14,7 @@ import org.scalatest.junit.JUnitRunner
 @RunWith(classOf[JUnitRunner])
 class InverSuite extends FunSuite {
   trait IntegerList {
-    val list1 =  InversionCounter.parseFileInput("src/test/resources/tc1", _.toInt)
+    val list1 =  InputUtilities.parseFileInput("src/test/resources/inver/tc1", _.toInt)
   }
 
   test("Input list tc1") {
@@ -37,18 +38,18 @@ class InverSuite extends FunSuite {
   }
 
   test("test tc2") {
-    val l = InversionCounter.parseFileInput("src/test/resources/tc2", _.toInt)
+    val l = InputUtilities.parseFileInput("src/test/resources/inver/tc2", _.toInt)
     assert(InversionCounter.count[Int](l)===4)
   }
 
 
   test("test tc3") {
-    val l = InversionCounter.parseFileInput("src/test/resources/tc3", _.toInt)
+    val l = InputUtilities.parseFileInput("src/test/resources/inver/tc3", _.toInt)
     assert(InversionCounter.count[Int](l)===10)
   }
 
   test("test tc4") {
-    val l = InversionCounter.parseFileInput("src/test/resources/tc4", _.toInt)
+    val l = InputUtilities.parseFileInput("src/test/resources/inver/tc4", _.toInt)
     assert(InversionCounter.count[Int](l)===56)
   }
 
@@ -64,7 +65,7 @@ class InverSuite extends FunSuite {
 
   test("final test") {
     val s = System.nanoTime()
-    val l = InversionCounter.parseFileInput("src/test/resources/IntegerArray.txt", _.toInt)
+    val l = InputUtilities.parseFileInput("src/test/resources/inver/IntegerArray.txt", _.toInt)
     val t = System.nanoTime()
     println(t -s)
     assert( InversionCounter.count[Int](l)  === 2407905288L)

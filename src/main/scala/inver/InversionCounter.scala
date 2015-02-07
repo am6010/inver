@@ -14,11 +14,6 @@ import scala.io.Source
 object InversionCounter {
 
 
-  def parseFileInput[T](fileName : String, toT : String => T) : List[T] = {
-    val textList = Source.fromFile(fileName).getLines().toList
-    textList.map(toT)
-  }
-
   /**
    * Divide Part of the Algorithm
    *
