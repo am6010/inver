@@ -28,7 +28,7 @@ class QuickSuite extends  FunSuite{
       def min(a:Int, b:Int): Int = {
         if(xs(a) < xs(b)) a else b
       }
-      
+
       max(max(min(l,r-1),min(m,l)),min(m,r-1))
     }
   }
